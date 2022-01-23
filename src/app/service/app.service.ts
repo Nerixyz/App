@@ -15,7 +15,7 @@ export class AppService {
 	title = '7tv.app';
 	description = 'It\'s like a third party thing';
 	currentView = '';
-	devStage = 'happy new year!';
+	devStage = '';
 	loading = false;
 
 	pageTitleSnapshot = '';

@@ -42,15 +42,6 @@
 			left: -100%;
 			font-weight: 600;
 		}
-
-		&.ny-h {
-			background-size: cover;
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-image: radial-gradient(circle, #d7b030 0%, #fff7b6 100%);
-			filter: drop-shadow(0 0 2px rgb(120, 120, 120));
-		}
 	}
 }
 
