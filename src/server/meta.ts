@@ -12,7 +12,7 @@ export function generateMetaTags(server: Router): void {
 		let data = req.query.object as string;
 		try {
 			data = JSON.parse(Buffer.from(data as string, 'base64').toString('utf8'));
-		} catch (err) {
+		} catch (err: any) {
 			console.error('oembed object parse error,', err);
 			return res.status(400).send(err.message);
 		}

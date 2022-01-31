@@ -19,7 +19,9 @@
 		"target": "es2015",
 		"module": "es2020",
 		"paths": {
-			"@typings/*": ["../Shared/*", "../Typings/*", "Typings/*"]
+			"@typings/typings/DataStructure": ["src/app/util/DataStructure.ts"],
+			"@typings/src/Constants": ["src/app/util/DataStructure.ts"],
+			"@typings/src/BitField": ["src/app/util/DataStructure.ts"]
 		},
 		"lib": [
 			"es2018",
