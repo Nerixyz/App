@@ -155,14 +155,14 @@ $logosize: 18vw;
 		width: 200%;
 		transform: rotate(-2deg);
 
-		background: linear-gradient(-22.5deg, #d7b030  40%, #fff7b6  50%, #d7b030  80%);
+		background: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 		background-size: 400% 400%;
-		animation: gradient 6s ease-in-out infinite;
+		animation: gradient 8s ease-in-out infinite;
 
 		@keyframes gradient {
 			0% { background-position: 0% 50%; }
 			50% { background-position: 100% 50%; }
-			99.999% { background-position: 100% 50%; }
+			70% { background-position: 100% 50%; }
 			100% { background-position: 0% 50%; }
 		}
 	}
