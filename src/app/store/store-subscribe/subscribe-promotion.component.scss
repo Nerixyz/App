@@ -55,14 +55,9 @@
 						-webkit-text-fill-color: transparent;
 						filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 
-						&[paint="sunset"] {
-							background-image: linear-gradient(90deg, rgba(255,172,100,1) 0%, rgba(163,27,114,1) 49%, rgba(70,13,139,1) 100%);
-						}
-						&[paint="soft-fire"] {
-							background-image: linear-gradient(90deg, rgba(236,255,100,1) 0%, rgba(255,166,40,1) 39%, rgba(255,75,73,1) 80%);
-						}
-						&[paint="shallow-sea"] {
-							background-image: linear-gradient(90deg, rgba(114,102,246,1) 0%, rgba(118,206,255,1) 39%, rgba(98,240,169,1) 80%);
+						&[paint="lunar-lantern"] {
+							filter: drop-shadow(rgba(255, 40, 40, 0.255) 0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) -0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px 0.2px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px -0.2px 0.6px);
+							background-image: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 						}
 					}
 				}
@@ -164,16 +159,18 @@
 
 @keyframes NametagGradientCarousel {
 	0% {
-		background-image: linear-gradient(90deg, rgba(255,172,100,1) 0%, rgba(163,27,114,1) 49%, rgba(70,13,139,1) 100%);
+		filter: drop-shadow(rgba(255, 40, 40, 0.255) 0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) -0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px 0.2px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px -0.2px 0.6px);
+		background-image: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 	}
 	25% {
-		background-image: linear-gradient(90deg, rgba(255,172,100,1) 0%, rgba(163,27,114,1) 49%, rgba(70,13,139,1) 100%);
+		filter: drop-shadow(rgba(255, 40, 40, 0.255) 0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) -0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px 0.2px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px -0.2px 0.6px);
+		background-image: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 	}
-	50% {
-		background-image: linear-gradient(90deg, rgba(236,255,100,1) 0%, rgba(255,166,40,1) 39%, rgba(255,75,73,1) 80%);
-		filter: none;
+	50% {filter: drop-shadow(rgba(255, 40, 40, 0.255) 0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) -0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px 0.2px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px -0.2px 0.6px);
+		background-image: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 	}
 	100% {
-		background-image: linear-gradient(90deg, rgba(114,102,246,1) 0%, rgba(118,206,255,1) 39%, rgba(98,240,169,1) 80%);
+		filter: drop-shadow(rgba(255, 40, 40, 0.255) 0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) -0.2px 0px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px 0.2px 0.6px) drop-shadow(rgba(255, 40, 40, 0.255) 0px -0.2px 0.6px);
+		background-image: linear-gradient(90deg, rgb(200, 35, 40) 1%, rgb(250, 170, 40) 20%, rgb(255, 215, 75) 40%, rgb(245, 135, 140) 60%, rgb(160, 40, 40) 80%, rgb(200, 150, 5) 99%);
 	}
 }

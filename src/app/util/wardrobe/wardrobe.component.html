@@ -42,7 +42,10 @@
                         <span>None</span>
                     </mat-radio-button>
                     <mat-radio-button (click)="selectPaint(paint.id)" [value]="paint.id" class="d-flex align-items-center cosmetic-item" *ngFor="let paint of paints">
-                        <span #paintedText class="painted-text" [style.background-image]="getPaintBackgroundImage(paint, paintedText)">{{ paint.name }}</span>
+                        <span #paintedText class="painted-text"
+                            [style.background-image]="getPaintBackgroundImage(paint, paintedText)[0]"
+                            [style.filter]="getPaintBackgroundImage(paint, paintedText)[1]"
+                        >{{ paint.name }}</span>
                     </mat-radio-button>
                 </mat-radio-group>
             </form>

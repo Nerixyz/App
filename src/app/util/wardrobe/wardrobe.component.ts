@@ -60,7 +60,7 @@ export class WardrobeComponent implements OnInit, OnDestroy {
 		);
 	}
 
-	getPaintBackgroundImage(paint: WardrobeComponent.PaintCosmetic, el: HTMLSpanElement): string {
+	getPaintBackgroundImage(paint: WardrobeComponent.PaintCosmetic, el: HTMLSpanElement): [string, string] {
 		// define the css function to use
 		const funcName = ''.concat(
 			paint.repeat ? 'repeating-' : '',
@@ -87,13 +87,20 @@ export class WardrobeComponent implements OnInit, OnDestroy {
 			}
 		}
 		// Handle drop shadow
-		const dropShadow = [] as string[];
-		if (paint.drop_shadow) {
-			const { x_offset, y_offset, color, radius } = paint.drop_shadow;
-			dropShadow.push(`${x_offset}px`, `${y_offset}px`, `${radius}px`, this.decimalToRGBA(color));
+		const dropShadows = [] as string[][];
+		if (Array.isArray(paint.drop_shadows) && paint.drop_shadows.length > 0) {
+			for (const shadow of paint.drop_shadows) {
+				const { x_offset, y_offset, color, radius } = shadow;
+				dropShadows.push([`${x_offset}px`, `${y_offset}px`, `${radius}px`, this.decimalToRGBA(color)]);
+			}
 		}
 
-		return `${funcName}(${args.join(', ')})`;
+		return [
+			`${funcName}(${args.join(', ')})`,
+			dropShadows.length > 0
+				? dropShadows.map(v => `drop-shadow(${v.join(' ')})`).join(' ')
+				: 'inherit'
+		];
 	}
 
 
@@ -211,7 +218,7 @@ export namespace WardrobeComponent {
 		angle: number;
 		shape?: string;
 		image_url?: string;
-		drop_shadow: PaintCosmetic.Shadow;
+		drop_shadows: PaintCosmetic.Shadow[];
 		animation: PaintCosmetic.Animation;
 	}
 	export namespace PaintCosmetic {
